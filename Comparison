@@ -1,0 +1,17 @@
+import java.util.Scanner ;
+
+public class Comparison { 	public static void main( String[] args)	{ 
+
+	Scanner input = new Scanner( System.in);
+	int answer ;	// Answer is either 0 or 1 
+
+	System.out.print ("Are you thirsty?, 0 if not, 1 if thirsty ");
+	answer = input.nextInt();
+	
+	if (answer==0) 
+	System.out.println(" You are not thirsty, get water") ;
+
+	if (answer!=0)
+	System.out.println("You are thirsty, buy coke");	
+  }
+  }
