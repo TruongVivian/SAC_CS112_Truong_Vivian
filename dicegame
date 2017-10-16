@@ -1,0 +1,83 @@
+import java.util.Scanner; 
+import java.util.Random;
+public class dicegame
+{ 
+public static void main (String[] args) 
+	{ 
+		Random random = new Random();
+		Scanner input=new Scanner(System.in);
+		int count = 0; 
+		int goodguess=0;
+		int badguess=0;
+	while (true) {	
+		
+		System.out.println("Dice already generated a number from 1 to 6, do you think it's odd or even?");
+		System.out.print("please type ODD or EVEN in lower case : ");
+		String mypick;
+		mypick=input.nextLine();
+				int dice=(int)(Math.random()*6+1);
+		count++;
+		System.out.println("number is "+ dice);
+						
+		if((dice %2) == 0) {
+			if 	("even".equals(mypick))
+				{System.out.println ("you are correct");
+				goodguess++ ;
+				break;}
+			else if ("odd".equals(mypick))
+			{System.out.println ("you are wrong, guess again");
+			badguess++ ;}
+			}			
+		
+		if ((dice %2) == 1) 
+		{
+				if 	("even".equals(mypick)) 
+				{System.out.println ("you are correct");
+				goodguess++ ;
+				break;}
+				else if ("odd".equals(mypick))
+				{System.out.println ("you are wrong, guess again");
+				badguess++ ;}
+		}		
+		/*else if ((dice %2)==1)
+		{ 
+			if ("odd".equals(mypick)) {
+				System.out.println("you are right");
+				goodguess++;	
+			}
+		}*/
+		
+		else 
+		{ 
+			System.out.print(" invalid " );
+			break;
+		}
+	}
+	
+		  int percent1 = (goodguess)*100/count; //Computation for percentage
+		  int percent2 = (badguess)*100/count;
+		  
+		  System.out.println("Summary of Results");
+		  System.out.println("*******************************");
+		  System.out.println("# of Good guesses:" + goodguess);
+		  System.out.println( "# of Bad guesses:" + badguess);
+		  System.out.println("# of Games Played:" + count);
+		  System.out.println("win percentage:" + percent1);
+		  System.out.println("lose percentage:" + percent2); 
+		  System.out.println("********************************");
+		
+		}
+		} 
+		
+
+	
+
+		
+
+		
+		
+	
+
+
+		
+	
