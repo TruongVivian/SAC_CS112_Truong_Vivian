@@ -1,0 +1,56 @@
+
+public class Random {
+private int Num;
+
+public  Random()
+{
+	Num = 1 + (int)(Math.random()*100);
+	
+}
+public void OddEven ()
+{
+	Num = 1 + (int)(Math.random()*100);
+}
+
+public int OddEven(int user) 
+{
+
+	if ( (Num %2 )== 0 )
+	{
+		if (user==1)
+				System.out.println("you are right, it is even");
+		else 
+			System.out.println("wrong pick , it is not odd !! ");
+	}
+	else if (( Num %2) != 0)
+	{
+		if (user==2)
+			System.out.println("you are right, it is odd");
+	else 
+		System.out.println("wrong pick , it is not even !!! ");
+	}
+	     
+	return Num;
+
+}
+public int Value()
+{
+	return Num;
+}
+
+}
+import java.util.Scanner;
+public class MainProgram {
+public static void main (String[] args)
+{ 
+	Random RNG= new Random();
+	Scanner input=new Scanner(System.in);
+	System.out.print("Please enter your guess , 1 for even, 2 for odd " );
+	int Pick=input.nextInt();
+	
+	RNG.OddEven(Pick);
+	
+	System.out.println(" the random number is " + RNG.Value());
+	input.close();
+}
+}
